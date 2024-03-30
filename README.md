@@ -4,7 +4,7 @@ Elemental block type 'Group' which holds other elemental blocks (akin to Element
 
 ## Requirements
 
-* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^4
+* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^4 or ^5
 
 ## Installation
 
