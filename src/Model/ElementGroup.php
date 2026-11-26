@@ -8,35 +8,37 @@ use Fromholdio\ElementalMultiArea\Extensions\MultiElementalAreasExtension;
 
 class ElementGroup extends BaseElement
 {
-    private static $table_name = 'ElementalGroup';
-    private static $singular_name = 'Group';
-    private static $plural_name = 'Groups';
+    private static string $table_name = 'ElementalGroup';
 
-    private static $inline_editable = false;
+    private static string $singular_name = 'Group';
 
-    private static $extensions = [
+    private static string $plural_name = 'Groups';
+
+    private static bool $inline_editable = false;
+
+    private static array $extensions = [
         MultiElementalAreasExtension::class
     ];
 
-    private static $has_one = [
+    private static array $has_one = [
         'Elements' => ElementalArea::class
     ];
 
-    private static $owns = [
+    private static array $owns = [
         'Elements'
     ];
 
-    private static $cascade_deletes = [
+    private static array $cascade_deletes = [
         'Elements'
     ];
 
-    private static $cascade_duplicates = [
+    private static array $cascade_duplicates = [
         'Elements'
     ];
 
-    public function getIsElementEmpty()
+    public function getIsElementEmpty(): bool
     {
-        return ($this->Elements()->Elements()->count() < 1);
+        return ($this->getComponent('Elements')->Elements()->count() < 1);
     }
 
     public function getType()

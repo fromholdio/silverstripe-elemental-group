@@ -4,12 +4,8 @@ Elemental block type 'Group' which holds other elemental blocks (akin to Element
 
 ## Requirements
 
-* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^4 or ^5
+* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^6
 
 ## Installation
 
 `composer require fromholdio/silverstripe-elemental-group`
-
-## Details & Usage
-
-Docs
