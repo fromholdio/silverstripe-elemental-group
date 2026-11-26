@@ -3,13 +3,12 @@
 namespace Fromholdio\ElementalGroup\Extensions;
 
 use Fromholdio\ElementalGroup\Model\ElementGroup;
-use SilverStripe\CMS\Controllers\CMSPageEditController;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Extension;
 
 class BaseElementCMSEditLinkExtension extends Extension
 {
-    public function updateCMSEditLink(&$link)
+    public function updateCMSEditLink(&$link): void
     {
         $owner = $this->getOwner();
 
